@@ -18,7 +18,7 @@ return new class extends Migration
              $table->foreignId('id_user')->references('id')->on('users');
             $table->foreignId('id_bidang')->references('id')->on('bidangs');
             $table->foreignId('id_provinsi')->references('id')->on('provinsis');
-            $table->string('nama_perushaan');
+            $table->string('nama_perusahaan');
             $table->text('alamat');
             $table->string('website');
             $table->timestamps();
