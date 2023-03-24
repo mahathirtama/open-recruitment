@@ -34,7 +34,7 @@ Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
 
-], function ($router) {
+], function () {
 
     Route::post('login', [AuthController::class, 'login']);
     Route::post('register', [AuthController::class, 'register']);
@@ -47,7 +47,7 @@ Route::group([
     'middleware' => 'IsPencaker',
     'prefix' => 'pencaker'
 
-], function ($router) {
+], function () {
 
     Route::resource('/lowongan',  LowonganController::class);
     Route::resource('/pendidikan',  PendidikanController::class);
@@ -62,7 +62,7 @@ Route::group([
     'middleware' => 'IsPerusahaan',
     'prefix' => 'perusahaan'
 
-], function ($router) {
+], function () {
 
     Route::resource('/perusahaan',  PerusahaanController::class);
     Route::resource('/event',  EventController::class);
@@ -74,7 +74,7 @@ Route::group([
     'middleware' => 'auth:api',
     'prefix' => 'master-data'
 
-], function ($router) {
+], function () {
     Route::resource('/bidang',  BidangController::class);
     Route::resource('/provinsi',  ProvinsiController::class);
 });
